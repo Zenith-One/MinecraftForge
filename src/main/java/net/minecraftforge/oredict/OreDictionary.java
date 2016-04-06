@@ -56,7 +56,7 @@ public class OreDictionary
     {
         if (!hasInit)
         {
-            // wood-related things
+            // tree- and wood-related things
             registerOre("logWood",     new ItemStack(Blocks.log, 1, WILDCARD_VALUE));
             registerOre("logWood",     new ItemStack(Blocks.log2, 1, WILDCARD_VALUE));
             registerOre("plankWood",   new ItemStack(Blocks.planks, 1, WILDCARD_VALUE));
@@ -71,6 +71,7 @@ public class OreDictionary
             registerOre("treeSapling", new ItemStack(Blocks.sapling, 1, WILDCARD_VALUE));
             registerOre("treeLeaves",  new ItemStack(Blocks.leaves, 1, WILDCARD_VALUE));
             registerOre("treeLeaves",  new ItemStack(Blocks.leaves2, 1, WILDCARD_VALUE));
+            registerOre("vine",        Blocks.vine);
 
             // Ores
             registerOre("oreGold",     Blocks.gold_ore);
@@ -115,6 +116,7 @@ public class OreDictionary
             registerOre("cropCarrot",  Items.carrot);
             registerOre("cropNetherWart", Items.nether_wart);
             registerOre("sugarcane",   Items.reeds);
+            registerOre("blockCactus", Blocks.cactus);
 
             // misc materials
             registerOre("dye",         new ItemStack(Items.dye, 1, WILDCARD_VALUE));
@@ -147,13 +149,18 @@ public class OreDictionary
 
             // blocks
             registerOre("dirt",        Blocks.dirt);
-            registerOre("endstone",    Blocks.end_stone);
+            registerOre("grass",       Blocks.grass);
             registerOre("stone",       Blocks.stone);
             registerOre("cobblestone", Blocks.cobblestone);
+            registerOre("netherrack",  Blocks.netherrack);
             registerOre("sandstone",   new ItemStack(Blocks.sandstone, 1, WILDCARD_VALUE));
             registerOre("sand",        new ItemStack(Blocks.sand, 1, WILDCARD_VALUE));
+            registerOre("endstone",    Blocks.end_stone);
+            registerOre("obsidian",    Blocks.obsidian);
             registerOre("torch",       Blocks.torch);
             registerOre("glowstone",   Blocks.glowstone);
+            registerOre("blockSlime",  Blocks.slime_block);
+            registerOre("gravel",      Blocks.gravel);
             registerOre("blockPrismarine",
                     new ItemStack(Blocks.prismarine, 1, BlockPrismarine.EnumType.ROUGH.getMetadata()));
             registerOre("blockPrismarineBrick",
@@ -169,13 +176,15 @@ public class OreDictionary
             registerOre("paneGlass",     new ItemStack(Blocks.stained_glass_pane, 1, WILDCARD_VALUE));
             //paneGlass{Color} is added below with dyes
 
-            // chests
+            // chests, etc
             registerOre("chest",       Blocks.chest);
             registerOre("chest",       Blocks.ender_chest);
             registerOre("chest",       Blocks.trapped_chest);
             registerOre("chestWood",   Blocks.chest);
             registerOre("chestEnder",  Blocks.ender_chest);
             registerOre("chestTrapped", Blocks.trapped_chest);
+            registerOre("workbench",   Blocks.crafting_table);
+            registerOre("workbench",   Blocks.crafting_table);
         }
 
         // Build our list of items to replace with ore tags
